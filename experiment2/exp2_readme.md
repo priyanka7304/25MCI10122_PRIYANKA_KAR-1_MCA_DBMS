@@ -5,6 +5,7 @@
 
 ## 👨‍🎓 **Student Details**  
 **Name:** Priyanka Chandwani
+
 **UID:** 25MCI10122  
 **Branch:** MCA (AI & ML)  
 **Semester:** 2nd  
@@ -146,31 +147,6 @@ GROUP BY product;
 
 ---
 
-## **Step 7: Applying Conditions on Aggregated Data (HAVING)**
-
-```sql
-select product,
-sum(quantity*price) as total_revenue
-from customer_orders
-group by product
-having sum(quantity*price) > 50000;
-```
-<img width="656" height="211" alt="image" src="https://github.com/user-attachments/assets/8be53c62-3230-4ba1-8219-7177bc58524e" />
-
----
-
-## **Step 8: Using WHERE and HAVING Together**
-
-```sql
-select product, sum(quantity*price) as total_revenue
-from customer_orders
-where order_date >= '2025-01-01'
-group by product
-having sum(quantity*price) > 50000;
-```
-<img width="728" height="226" alt="image" src="https://github.com/user-attachments/assets/df807258-ae9f-4526-812c-edb81b12b1c0" />
-
----
 
 ## 📥📤 **I/O Analysis (Input / Output)**
 
