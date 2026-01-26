@@ -5,7 +5,6 @@
 
 ## 👨‍🎓 **Student Details**  
 **Name:** Priyanka Chandwani
-
 **UID:** 25MCI10122  
 **Branch:** MCA (AI & ML)  
 **Semester:** 2nd  
