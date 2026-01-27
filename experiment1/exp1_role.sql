@@ -55,7 +55,7 @@ WHERE dept_id = 20;
 DELETE FROM Employee
 WHERE dept_id = 10;
 
-CREATE user manager with password Manager@123;
+CREATE USER manager WITH PASSWORD 'manager@123'; 
 
 GRANT SELECT ON Department TO manager;
 GRANT SELECT ON Employee TO manager;
