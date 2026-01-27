@@ -113,7 +113,7 @@ SUM(quantity) AS total_quantity
 FROM customer_orders
 GROUP BY product;
 ```
-<img width="1020" height="244" alt="image" src="images/step4.jpeg" />
+<img width="1020" height="244" alt="image" src="images/step6.jpeg" />
 
 ---
 
@@ -127,7 +127,7 @@ FROM customer_orders
 GROUP BY product
 HAVING SUM(quantity * price) > 50000;
 ```
-<img width="1013" height="242" alt="image" src="images/step5.jpeg" />
+<img width="1013" height="242" alt="image" src="images/step4.jpeg" />
 
 
 ---
@@ -142,7 +142,7 @@ WHERE order_date >= '2024-02-01'
   AND order_date <= '2024-02-29'
 GROUP BY product;
 ```
-<img width="530" height="320" alt="image" src="images/step6.jpeg" />
+<img width="530" height="320" alt="image" src="images/step5.jpeg" />
 
 ---
 
