@@ -186,7 +186,7 @@ $$;
 
 ---
 
-##Learning Outcomes
+## Learning Outcomes
 
 - Understand the need for iteration in database applications.
 - Identify and use different loop types (FOR, WHILE, LOOP).
