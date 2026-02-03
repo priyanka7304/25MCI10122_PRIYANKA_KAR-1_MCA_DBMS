@@ -11,7 +11,7 @@
 
 ---
 
-## EXPERIMENT -- 04
+## EXPERIMENT - 04
 
 **Implementation of Iterative Control Structures using FOR, WHILE, and LOOP in PostgreSQL** 
 
@@ -88,7 +88,7 @@ $$;
 ``` 
 
 ### Output-
-<img width="1125" height="236" alt="image" src="images/2.png" />
+<img width="700" height="236" alt="image" src="images/2.png" />
 
 ---
 
@@ -108,7 +108,7 @@ $$;
 ``` 
 
 ### Output-
-<img width="1125" height="236" alt="image" src="images/3.png" />
+<img width="700" height="236" alt="image" src="images/3.png" />
 
 ---
 
@@ -129,7 +129,7 @@ $$;
 ``` 
 
 ### Output-
-<img width="1125" height="236" alt="image" src="images/4.png" />
+<img width="700" height="236" alt="image" src="images/4.png" />
 
 ---
 
@@ -155,7 +155,7 @@ $$;
 ``` 
 
 ### Output-
-<img width="1125" height="236" alt="image" src="images/5.png" />
+<img width="700" height="236" alt="image" src="images/5.png" />
 
 ---
 
@@ -182,7 +182,7 @@ $$;
 ``` 
 
 ### Output-
-<img width="1125" height="236" alt="image" src="images/6.png" />
+<img width="700" height="236" alt="image" src="images/6.png" />
 
 ---
 
