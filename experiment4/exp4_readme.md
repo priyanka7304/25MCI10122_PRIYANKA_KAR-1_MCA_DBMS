@@ -185,13 +185,16 @@ $$;
 <img width="700" height="236" alt="image" src="images/6.png" />
 
 ---
+
 ##Learning Outcomes
 
--Understand the need for iteration in database applications.
--Identify and use different loop types (FOR, WHILE, LOOP).
--Implement fixed and query-based repetition for row processing.
--Apply conditional and exit-controlled loops for automation tasks.
--Use PL/pgSQL loops in real-world scenarios like payroll, reporting, and batch processing.
+- Understand the need for iteration in database applications.
+- Identify and use different loop types (FOR, WHILE, LOOP).
+- Implement fixed and query-based repetition for row processing.
+- Apply conditional and exit-controlled loops for automation tasks.
+- Use PL/pgSQL loops in real-world scenarios like payroll, reporting, and batch processing.
+
+---
 
 ## Conclusion
 
