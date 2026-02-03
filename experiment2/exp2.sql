@@ -51,7 +51,7 @@ SELECT product,
 FROM customer_orders
 GROUP BY product;
 
-
+  
 -- Step 5: Applying Conditions on Aggregated Data (HAVING)
 
 SELECT product,
