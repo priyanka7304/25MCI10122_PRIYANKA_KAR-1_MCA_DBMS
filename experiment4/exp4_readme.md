@@ -53,7 +53,7 @@ END;
 $$;
 ```
 ### Output-
-<img width="900" height="236" alt="image" src="images/1.png" />
+<img width="800" height="236" alt="image" src="images/1.png" />
 
 ---
 
