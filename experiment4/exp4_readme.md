@@ -7,35 +7,35 @@
 > **Semester:** 2  
 > **Date of Performance:** 3/2/26  
 > **Subject Name:** Technical Training  
-> **Subject Code:** 25CAP-652 [file:1]
+> **Subject Code:** 25CAP-652 
 
 ---
 
 ## EXPERIMENT -- 04
 
-**Implementation of Iterative Control Structures using FOR, WHILE, and LOOP in PostgreSQL** [file:1]
+**Implementation of Iterative Control Structures using FOR, WHILE, and LOOP in PostgreSQL** 
 
 ---
 
 ## Aim
 
-To understand and implement iterative control structures in PostgreSQL conceptually, including FOR loops, WHILE loops, and basic LOOP constructs, for repeated execution of database logic. [file:1]
+To understand and implement iterative control structures in PostgreSQL conceptually, including FOR loops, WHILE loops, and basic LOOP constructs, for repeated execution of database logic. 
 
 ---
 
 ## Tools Used
 
-- PostgreSQL [file:1]
+- PostgreSQL 
 
 ---
 
 ## Objectives
 
-- To understand why iteration is required in database programming. [file:1]  
-- To learn the purpose and behavior of FOR, WHILE, and LOOP constructs. [file:1]  
-- To understand how repeated data processing is handled in databases. [file:1]  
-- To relate loop concepts to real-world batch processing scenarios. [file:1]  
-- To strengthen conceptual knowledge of procedural SQL used in enterprise systems. [file:1]
+- To understand why iteration is required in database programming.   
+- To learn the purpose and behavior of FOR, WHILE, and LOOP constructs.   
+- To understand how repeated data processing is handled in databases.   
+- To relate loop concepts to real-world batch processing scenarios.   
+- To strengthen conceptual knowledge of procedural SQL used in enterprise systems. 
 
 ---
 
@@ -51,9 +51,9 @@ BEGIN
     END LOOP;
 END;
 $$;
-``` [file:1]
-
-![image](1.png) [file:1]
+```
+### Output-
+<img width="1125" height="236" alt="image" src="images/1.png" />
 
 ---
 
@@ -85,9 +85,10 @@ BEGIN
     END LOOP;
 END;
 $$;
-``` [file:1]
+``` 
 
-![image](2.png) [file:1]
+### Output-
+<img width="1125" height="236" alt="image" src="images/2.png" />
 
 ---
 
@@ -104,9 +105,10 @@ BEGIN
     END LOOP;
 END;
 $$;
-``` [file:1]
+``` 
 
-![image](3.png) [file:1]
+### Output-
+<img width="1125" height="236" alt="image" src="images/3.png" />
 
 ---
 
@@ -124,9 +126,10 @@ BEGIN
     END LOOP;
 END;
 $$;
-``` [file:1]
+``` 
 
-![image](4.png) [file:1]
+### Output-
+<img width="1125" height="236" alt="image" src="images/4.png" />
 
 ---
 
@@ -149,9 +152,10 @@ BEGIN
     END LOOP;
 END;
 $$;
-``` [file:1]
+``` 
 
-![image](5.png) [file:1]
+### Output-
+<img width="1125" height="236" alt="image" src="images/5.png" />
 
 ---
 
@@ -175,9 +179,10 @@ BEGIN
     END LOOP;
 END;
 $$;
-``` [file:1]
+``` 
 
-![image](6.png) [file:1]
+### Output-
+<img width="1125" height="236" alt="image" src="images/6.png" />
 
 ---
 
