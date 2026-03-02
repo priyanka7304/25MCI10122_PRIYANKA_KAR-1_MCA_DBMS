@@ -115,7 +115,7 @@ SELECT * FROM EmpDeptView;
 
 ---
 
-## 🔹 Step 3: Advanced Summarization (Department Salary Statistics)
+## Step 3: Advanced Summarization (Department Salary Statistics)
 
 ```sql
 CREATE VIEW DeptSalaryStats AS
