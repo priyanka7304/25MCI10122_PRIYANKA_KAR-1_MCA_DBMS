@@ -1,11 +1,11 @@
-**Student Name : Priyanka Chandwani**
-**UID: 25MCI10122**
-**Branch : MCA (AI & ML)**
-**Section/Group : 25MAM-1-A**
-**Semester : 2nd**
-**Date of Performance: 31.03.2026**
-**Subject Name : Technical Training**
-**Subject Code : 25CAP-652**
+** Student Name : Priyanka Chandwani **
+** UID: 25MCI10122 **
+** Branch : MCA (AI & ML) **
+** Section/Group : 25MAM-1-A **
+** Semester : 2nd **
+** Date of Performance: 31.03.2026 **
+** Subject Name : Technical Training **
+** Subject Code : 25CAP-652 **
 
 ### **Experiment 7:**
 
