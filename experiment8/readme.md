@@ -1,9 +1,15 @@
 **Student Name: Priyanka Chandwani**
+
 **UID: 25MCI10122**
+
 **Branch: M.C.A(A.l & M.L)**
+
 **Section/Group: MAM-1 A**
+
 **Semester: Second Sem**
+
 **Date of Performance:12/01/2026**
+
 **Subject Name: TECHINCAL SKILLS**
 
 WORKSHEET 8
