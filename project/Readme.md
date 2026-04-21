@@ -157,7 +157,7 @@ INSERT INTO students (name, course, year) VALUES
 ```
 
 _Output screenshot : `output/picture1.png` (Students inserted)_
-![Students Output](output/picture1.png)
+![Students Output](output/Picture1.png)
 
 ### Rooms
 
@@ -170,7 +170,7 @@ INSERT INTO rooms (capacity, occupied) VALUES
 ```
 
 _Output screenshot: `output/picture2.png` (Rooms inserted)_
-![Students Output](output/picture2.png)
+![Students Output](output/Picture2.png)
 
 ### Allocations
 
@@ -184,7 +184,7 @@ INSERT INTO allocation (student_id, room_id) VALUES
 ```
 
 _Output screenshot: `output/picture3.png` (Allocations inserted & trigger fired)_
-![Students Output](output/picture3.png)
+![Students Output](output/Picture3.png)
 
 ### Complaints
 
@@ -205,7 +205,7 @@ INSERT INTO complaints (student_id, issue, status) VALUES
 ```
 
 _Output screenshot: `output/pictur4.png` (Complaints inserted)_
-![Students Output](output/picture4.png)
+![Students Output](output/Picture4.png)
 
 ---
 
@@ -221,7 +221,7 @@ WHERE a.room_id = 1;
 ```
 
 _Output screenshot: `output/picture5.png` (Students in Room 1)_
-![Students Output](output/picture5.png)
+![Students Output](output/Picture5.png)
 
 ### 2. Rooms with Available Space
 
@@ -231,7 +231,7 @@ FROM rooms
 WHERE occupied < capacity;
 ```
 
-_Output screenshot: `output/picture6.png` (Available rooms)_
+_Output screenshot: `output/Picture6.png` (Available rooms)_
 ![Students Output](output/picture6.png)
 
 ### 3. All Pending Complaints
@@ -243,7 +243,7 @@ WHERE status = 'Pending';
 ```
 
 _Output screenshot: `output/picture7.png` (Pending complaints)_
-![Students Output](output/picture7.png)
+![Students Output](output/Picture7.png)
 
 ### 4. All Students Ordered by Course and Year
 
@@ -254,7 +254,7 @@ ORDER BY course, year;
 ```
 
 _Output screenshot: `output/picture8.png` (Students ordered by course & year)_
-![Students Output](output/picture8.png)
+![Students Output](output/Picture8.png)
 
 ### 5. Final Year B.Tech Students
 
@@ -265,7 +265,7 @@ WHERE year > 3 AND course = 'B.Tech';
 ```
 
 _Output screenshot: `output/picture9.png` (Final year B.Tech students)_
-![Students Output](output/picture9.png)
+![Students Output](output/Picture9.png)
 
 ### 6. Update Queries
 
@@ -278,7 +278,7 @@ WHERE complaint_id = 1;
 ```
 
 _Output screenshot: `output/picture10.png` (Complaint 1 marked resolved)_
-![Students Output](output/picture10.png)
+![Students Output](output/Picture10.png)
 
 - Bulk resolve all `In Progress` complaints:
 
@@ -289,7 +289,7 @@ WHERE status = 'In Progress';
 ```
 
 _Output screenshot: `output/picture11.png` (Bulk resolved complaints)_
-![Students Output](output/picture11.png)
+![Students Output](output/Picture11.png)
 
 ### 7. Delete Query and Advanced Report
 
@@ -302,7 +302,7 @@ WHERE complaint_id = 1
 ```
 
 _Output screenshot: `output/picture12.png` (Resolved complaint deleted)_
-![Students Output](output/picture12.png)
+![Students Output](output/Picture12.png)
 
 - Room-wise student list using `STRING_AGG`:
 
@@ -319,7 +319,7 @@ ORDER BY r.room_id;
 ```
 
 _Output screenshot: `output/picture13.png` (Room-wise consolidated student list)_
-![Students Output](output/picture13.png)
+![Students Output](output/Picture13.png)
 
 ---
 
