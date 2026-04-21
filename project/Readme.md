@@ -1,35 +1,35 @@
 # Hostel Management System – DBMS Mini Project
 
-This repository contains the PostgreSQL-based **Hostel Management System** implemented as part of the MCA (AI & ML) Technical Training – I course (CAP-652) at Chandigarh University. [file:2]  
-The project focuses on designing a relational schema, implementing constraints, triggers, functions, and demonstrating SQL operations for managing hostel operations. [file:2]
+This repository contains the PostgreSQL-based **Hostel Management System** implemented as part of the MCA (AI & ML) Technical Training – I course (CAP-652) at Chandigarh University.
+The project focuses on designing a relational schema, implementing constraints, triggers, functions, and demonstrating SQL operations for managing hostel operations.
 
 ---
 
 ## Project Overview
 
-The Hostel Management System digitizes key hostel workflows such as student data management, room allocation, and complaint handling using a relational database. [file:2]  
-It replaces manual, error-prone processes with an automated, constraint-driven PostgreSQL schema that ensures data integrity and efficient querying. [file:2]
+The Hostel Management System digitizes key hostel workflows such as student data management, room allocation, and complaint handling using a relational database.  
+It replaces manual, error-prone processes with an automated, constraint-driven PostgreSQL schema that ensures data integrity and efficient querying.
 
 ### Core Objectives
 
-- Design a normalized relational schema for hostel operations. [file:2]
-- Automate room occupancy tracking using triggers. [file:2]
-- Provide real-time visibility of available rooms through queries/views. [file:2]
-- Enforce referential integrity for student–room–complaint relationships. [file:2]
-- Implement a complaint management workflow with status tracking. [file:2]
-- Demonstrate CRUD and advanced SQL (JOIN, GROUP BY, STRING_AGG). [file:2]
-- Implement PL/pgSQL functions for reusable data retrieval. [file:2]
+- Design a normalized relational schema for hostel operations.
+- Automate room occupancy tracking using triggers.
+- Provide real-time visibility of available rooms through queries/views.
+- Enforce referential integrity for student–room–complaint relationships.
+- Implement a complaint management workflow with status tracking.
+- Demonstrate CRUD and advanced SQL (JOIN, GROUP BY, STRING_AGG).
+- Implement PL/pgSQL functions for reusable data retrieval.
 
 ---
 
 ## Tech Stack
 
-- **Database:** PostgreSQL 14+ [file:2]
-- **Database Tools:** pgAdmin 4 [file:2]
-- **Languages:** SQL, PL/pgSQL [file:2]
-- **OS:** Windows 10/11, Ubuntu 20.04+ [file:2]
-- **Minimum Hardware:** 4 GB RAM, 500 MB free storage [file:2]
-- **Editors/Tools:** VS Code (SQL extension), terminal/psql [file:2]
+- **Database:** PostgreSQL 14+
+- **Database Tools:** pgAdmin 4
+- **Languages:** SQL, PL/pgSQL
+- **OS:** Windows 10/11, Ubuntu 20.04+
+- **Minimum Hardware:** 4 GB RAM, 500 MB free storage
+- **Editors/Tools:** VS Code (SQL extension), terminal/psql
 
 ---
 
@@ -39,12 +39,12 @@ The system is built around four main entities: **students**, **rooms**, **alloca
 
 ### Entity Summary
 
-| Entity     | Primary Key   | Key Attributes                       | Relationship description              | Source   |
-| ---------- | ------------- | ------------------------------------ | ------------------------------------- | -------- |
-| students   | student_id    | name, course, year                   | Has many allocations, many complaints | [file:2] |
-| rooms      | room_id       | capacity, occupied                   | Linked to many allocations            | [file:2] |
-| allocation | allocation_id | student_id, room_id, allocation_date | Junction between students and rooms   | [file:2] |
-| complaints | complaint_id  | student_id, issue, status            | Each complaint belongs to one student | [file:2] |
+| Entity     | Primary Key   | Key Attributes                       | Relationship description              |
+| ---------- | ------------- | ------------------------------------ | ------------------------------------- |
+| students   | student_id    | name, course, year                   | Has many allocations, many complaints |
+| rooms      | room_id       | capacity, occupied                   | Linked to many allocations            |
+| allocation | allocation_id | student_id, room_id, allocation_date | Junction between students and rooms   |
+| complaints | complaint_id  | student_id, issue, status            | Each complaint belongs to one student |
 
 ### Table Structures
 
@@ -83,7 +83,7 @@ CREATE TABLE complaints (
 
 ### Business Constraints
 
-- CHECK constraint on `rooms` to prevent overbooking: `occupied <= capacity`. [file:2]
+- CHECK constraint on `rooms` to prevent overbooking: `occupied <= capacity`.
 
 ```sql
 ALTER TABLE rooms
@@ -93,7 +93,7 @@ CHECK (occupied <= capacity);
 
 ### Trigger Logic – Room Occupancy
 
-A trigger automatically increments room occupancy when a new allocation is inserted. [file:2]
+A trigger automatically increments room occupancy when a new allocation is inserted.
 
 ```sql
 CREATE OR REPLACE FUNCTION update_occupancy()
@@ -130,11 +130,11 @@ $$ LANGUAGE plpgsql;
 
 ## Sample Data
 
-The project uses realistic sample data to demonstrate queries and outputs. [file:2]
+The project uses realistic sample data to demonstrate queries and outputs.
 
 ### Students
 
-- 16 student records across courses: BBA, BCA, B.Tech, MCA, MSC, MBA, B.Com. [file:2]
+- 16 student records across courses: BBA, BCA, B.Tech, MCA, MSC, MBA, B.Com.
 
 ```sql
 INSERT INTO students (name, course, year) VALUES
@@ -156,11 +156,12 @@ INSERT INTO students (name, course, year) VALUES
 ('Pooja Bhatia', 'MSC', 2);
 ```
 
-_Output screenshot: `output/picture1.png` (Students inserted)_
+_Output screenshot : `output/picture1.png` (Students inserted)_
+![Students Output](output/picture1.png)
 
 ### Rooms
 
-- 10 rooms with capacities from 1 to 4 beds, all starting with `occupied = 0`. [file:2]
+- 10 rooms with capacities from 1 to 4 beds, all starting with `occupied = 0`.
 
 ```sql
 INSERT INTO rooms (capacity, occupied) VALUES
@@ -169,10 +170,11 @@ INSERT INTO rooms (capacity, occupied) VALUES
 ```
 
 _Output screenshot: `output/picture2.png` (Rooms inserted)_
+![Students Output](output/picture2.png)
 
 ### Allocations
 
-- 13 allocation records with trigger-based occupancy updates. [file:2]
+- 13 allocation records with trigger-based occupancy updates.
 
 ```sql
 INSERT INTO allocation (student_id, room_id) VALUES
@@ -182,6 +184,7 @@ INSERT INTO allocation (student_id, room_id) VALUES
 ```
 
 _Output screenshot: `output/picture3.png` (Allocations inserted & trigger fired)_
+![Students Output](output/picture3.png)
 
 ### Complaints
 
@@ -201,13 +204,12 @@ INSERT INTO complaints (student_id, issue, status) VALUES
 (6,  'Noisy neighbour disturbing studies',              'Pending');
 ```
 
-_Output screenshot: `output/picture4.png` (Complaints inserted)_
+_Output screenshot: `output/pictur4.png` (Complaints inserted)_
+![Students Output](output/picture4.png)
 
 ---
 
 ## Example Queries and Outputs
-
-Each query in the report is backed by execution screenshots; here we map them to file names you can store in the `output/` folder. [file:2]
 
 ### 1. Students Allocated to Room 1
 
@@ -219,6 +221,7 @@ WHERE a.room_id = 1;
 ```
 
 _Output screenshot: `output/picture5.png` (Students in Room 1)_
+![Students Output](output/picture5.png)
 
 ### 2. Rooms with Available Space
 
@@ -229,6 +232,7 @@ WHERE occupied < capacity;
 ```
 
 _Output screenshot: `output/picture6.png` (Available rooms)_
+![Students Output](output/picture6.png)
 
 ### 3. All Pending Complaints
 
@@ -239,6 +243,7 @@ WHERE status = 'Pending';
 ```
 
 _Output screenshot: `output/picture7.png` (Pending complaints)_
+![Students Output](output/picture7.png)
 
 ### 4. All Students Ordered by Course and Year
 
@@ -249,6 +254,7 @@ ORDER BY course, year;
 ```
 
 _Output screenshot: `output/picture8.png` (Students ordered by course & year)_
+![Students Output](output/picture8.png)
 
 ### 5. Final Year B.Tech Students
 
@@ -259,6 +265,7 @@ WHERE year > 3 AND course = 'B.Tech';
 ```
 
 _Output screenshot: `output/picture9.png` (Final year B.Tech students)_
+![Students Output](output/picture9.png)
 
 ### 6. Update Queries
 
@@ -271,6 +278,7 @@ WHERE complaint_id = 1;
 ```
 
 _Output screenshot: `output/picture10.png` (Complaint 1 marked resolved)_
+![Students Output](output/picture10.png)
 
 - Bulk resolve all `In Progress` complaints:
 
@@ -281,6 +289,7 @@ WHERE status = 'In Progress';
 ```
 
 _Output screenshot: `output/picture11.png` (Bulk resolved complaints)_
+![Students Output](output/picture11.png)
 
 ### 7. Delete Query and Advanced Report
 
@@ -293,6 +302,7 @@ WHERE complaint_id = 1
 ```
 
 _Output screenshot: `output/picture12.png` (Resolved complaint deleted)_
+![Students Output](output/picture12.png)
 
 - Room-wise student list using `STRING_AGG`:
 
@@ -309,6 +319,7 @@ ORDER BY r.room_id;
 ```
 
 _Output screenshot: `output/picture13.png` (Room-wise consolidated student list)_
+![Students Output](output/picture13.png)
 
 ---
 
@@ -330,3 +341,4 @@ _Output screenshot: `output/picture13.png` (Room-wise consolidated student list)
 
 The project demonstrates correct use of relational modeling, constraints, triggers, PL/pgSQL functions, and non-trivial SQL queries in a realistic hostel scenario. [file:2]  
 It forms a strong backend foundation that can be extended with a web UI (e.g., React, Django), REST APIs, and role-based access control for a production-ready Hostel Management System. [file:2]
+s
