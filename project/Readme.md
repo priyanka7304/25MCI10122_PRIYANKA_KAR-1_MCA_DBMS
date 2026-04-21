@@ -35,7 +35,7 @@ It replaces manual, error-prone processes with an automated, constraint-driven P
 
 ## Database Design
 
-The system is built around four main entities: **students**, **rooms**, **allocation**, and **complaints**, each mapped to a relational table. [file:2]
+The system is built around four main entities: **students**, **rooms**, **allocation**, and **complaints**, each mapped to a relational table.
 
 ### Entity Summary
 
@@ -157,6 +157,7 @@ INSERT INTO students (name, course, year) VALUES
 ```
 
 _Output screenshot : `output/picture1.png` (Students inserted)_
+
 ![Students Output](output/Picture1.png)
 
 ### Rooms
@@ -170,6 +171,7 @@ INSERT INTO rooms (capacity, occupied) VALUES
 ```
 
 _Output screenshot: `output/picture2.png` (Rooms inserted)_
+
 ![Students Output](output/Picture2.png)
 
 ### Allocations
@@ -184,11 +186,12 @@ INSERT INTO allocation (student_id, room_id) VALUES
 ```
 
 _Output screenshot: `output/picture3.png` (Allocations inserted & trigger fired)_
+
 ![Students Output](output/Picture3.png)
 
 ### Complaints
 
-- 10 complaint records with different statuses (Pending, In Progress, Resolved). [file:2]
+- 10 complaint records with different statuses (Pending, In Progress, Resolved).
 
 ```sql
 INSERT INTO complaints (student_id, issue, status) VALUES
@@ -205,6 +208,7 @@ INSERT INTO complaints (student_id, issue, status) VALUES
 ```
 
 _Output screenshot: `output/pictur4.png` (Complaints inserted)_
+
 ![Students Output](output/Picture4.png)
 
 ---
@@ -221,6 +225,7 @@ WHERE a.room_id = 1;
 ```
 
 _Output screenshot: `output/picture5.png` (Students in Room 1)_
+
 ![Students Output](output/Picture5.png)
 
 ### 2. Rooms with Available Space
@@ -232,6 +237,7 @@ WHERE occupied < capacity;
 ```
 
 _Output screenshot: `output/Picture6.png` (Available rooms)_
+
 ![Students Output](output/picture6.png)
 
 ### 3. All Pending Complaints
@@ -243,6 +249,7 @@ WHERE status = 'Pending';
 ```
 
 _Output screenshot: `output/picture7.png` (Pending complaints)_
+
 ![Students Output](output/Picture7.png)
 
 ### 4. All Students Ordered by Course and Year
@@ -254,6 +261,7 @@ ORDER BY course, year;
 ```
 
 _Output screenshot: `output/picture8.png` (Students ordered by course & year)_
+
 ![Students Output](output/Picture8.png)
 
 ### 5. Final Year B.Tech Students
@@ -265,6 +273,7 @@ WHERE year > 3 AND course = 'B.Tech';
 ```
 
 _Output screenshot: `output/picture9.png` (Final year B.Tech students)_
+
 ![Students Output](output/Picture9.png)
 
 ### 6. Update Queries
@@ -278,6 +287,7 @@ WHERE complaint_id = 1;
 ```
 
 _Output screenshot: `output/picture10.png` (Complaint 1 marked resolved)_
+
 ![Students Output](output/Picture10.png)
 
 - Bulk resolve all `In Progress` complaints:
@@ -289,6 +299,7 @@ WHERE status = 'In Progress';
 ```
 
 _Output screenshot: `output/picture11.png` (Bulk resolved complaints)_
+
 ![Students Output](output/Picture11.png)
 
 ### 7. Delete Query and Advanced Report
@@ -302,6 +313,7 @@ WHERE complaint_id = 1
 ```
 
 _Output screenshot: `output/picture12.png` (Resolved complaint deleted)_
+
 ![Students Output](output/Picture12.png)
 
 - Room-wise student list using `STRING_AGG`:
@@ -319,26 +331,27 @@ ORDER BY r.room_id;
 ```
 
 _Output screenshot: `output/picture13.png` (Room-wise consolidated student list)_
+
 ![Students Output](output/Picture13.png)
 
 ---
 
 ## How to Run
 
-1. Install PostgreSQL 14+ and pgAdmin 4 on your system. [file:2]
-2. Create a new database, e.g. `hostel_management`. [file:2]
-3. Open pgAdmin/psql and connect to the database. [file:2]
-4. Execute the SQL scripts in this order: [file:2]
+1. Install PostgreSQL 14+ and pgAdmin 4 on your system.
+2. Create a new database, e.g. `hostel_management`.
+3. Open pgAdmin/psql and connect to the database.
+4. Execute the SQL scripts in this order:
    - Create tables (`students`, `rooms`, `allocation`, `complaints`).
    - Add constraints and trigger function.
    - Create `allocate_room_trigger` and `get_student_room()` function.
    - Insert sample data (students, rooms, allocations, complaints).
-5. Run the SELECT/UPDATE/DELETE queries to reproduce the outputs and compare with `output/picture*.png`. [file:2]
+5. Run the SELECT/UPDATE/DELETE queries to reproduce the outputs and compare with `output/picture*.png`.
 
 ---
 
 ## Results and Learning Outcomes
 
-The project demonstrates correct use of relational modeling, constraints, triggers, PL/pgSQL functions, and non-trivial SQL queries in a realistic hostel scenario. [file:2]  
-It forms a strong backend foundation that can be extended with a web UI (e.g., React, Django), REST APIs, and role-based access control for a production-ready Hostel Management System. [file:2]
+The project demonstrates correct use of relational modeling, constraints, triggers, PL/pgSQL functions, and non-trivial SQL queries in a realistic hostel scenario.
+It forms a strong backend foundation that can be extended with a web UI (e.g., React, Django), REST APIs, and role-based access control for a production-ready Hostel Management System.
 s
