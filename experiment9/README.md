@@ -103,6 +103,7 @@ SELECT * FROM employee;
 
 ## Author
 
-Priyanka Chandwani \  
+Priyanka Chandwani
+
 MCA (AI & ML)  
 Chandigarh University
